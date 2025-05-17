@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:newprac/screens/home.dart';
 
  void main(){
-  runApp(const TodoApp());
+  runApp(const MyApp());
  }
 
- class TodoApp extends StatelessWidget {
-   const TodoApp({super.key});
+ class MyApp extends StatelessWidget {
+   const MyApp({Key? key}) : super(key: key);
 
    @override
    Widget build(BuildContext context) {
-     return Material(
-      title: 'To-Do App',
-      theme: ThemeData(
-       primarySwatch: Colors.blue,
-       visualDensity: VisualDensity.adaptivePlatformDensity,
-
-       ),
-         home: const TodoListScreen(),
-      );
+     return MaterialApp(
+       debugShowCheckedModeBanner: false,
+       title: 'ToDo App',
+       home: Home(),
+     );
    }
  }
