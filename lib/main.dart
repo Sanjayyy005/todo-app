@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:newprac/screens/home.dart';
 
  void main(){
@@ -10,6 +11,8 @@ import 'package:newprac/screens/home.dart';
 
    @override
    Widget build(BuildContext context) {
+     SystemChrome.setSystemUIOverlayStyle(
+       SystemUiOverlayStyle(statusBarColor: Colors.transparent)) ;
      return MaterialApp(
        debugShowCheckedModeBanner: false,
        title: 'ToDo App',
